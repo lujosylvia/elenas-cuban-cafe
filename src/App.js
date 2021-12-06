@@ -1,6 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
+import { BrowserRouter as Router } from "react-router-dom";
 import AppToolbar from "./components/Toolbar/AppToolbar";
+import AnimatedRouter from "./router/AnimatedRouter";
 import { mainTheme } from "./themes/mainTheme";
 import './App.css';
 
@@ -8,9 +10,12 @@ import './App.css';
 const App = () => {
   return (
     <ThemeProvider theme={mainTheme}>
-      <div className="App">
-        <AppToolbar />
-      </div>
+      <Router>
+        <div className="App">
+          <AppToolbar />
+        </div>
+        <AnimatedRouter />
+      </Router>
     </ThemeProvider>
   );
 }

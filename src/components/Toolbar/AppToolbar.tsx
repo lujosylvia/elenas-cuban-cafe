@@ -1,10 +1,18 @@
 import { AppBar, Toolbar,  Box, IconButton, Typography, Button, Menu, MenuItem } from "@mui/material";
 import MenuIcon  from '@mui/icons-material/Menu';
+import useHistory from "react-router-dom";
 import { useAppToolbarStyles } from "./styles"; 
 
 import React from "react";
+import { Link } from "react-router-dom";
 
-const pages = ['Menu', 'Location'];
+const pages = [{
+        title: 'Menu',
+        route: "menu"
+    }, {
+        title: 'Location',
+        route: "location"
+    }];
 
 const AppToolbar = () => {
     const styles = useAppToolbarStyles();
@@ -57,8 +65,8 @@ const AppToolbar = () => {
                     }}
                     >
                     {pages.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center">{page}</Typography>
+                        <MenuItem key={page.title} component={Link} to={page.route} onClick={handleCloseNavMenu}>
+                            <Typography textAlign="center">{page.title}</Typography>
                         </MenuItem>
                     ))}
                     </Menu>
@@ -67,18 +75,20 @@ const AppToolbar = () => {
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) => (
                     <Button
-                        key={page}
-                        onClick={handleCloseNavMenu}
+                        key={page.title}
+                        component={Link}
+                        to={page.route}
                         sx={{ my: 2, color: 'white', display: 'block' }}
                     >
-                        {page}
+                        {page.title}
                     </Button>
                     ))}
                 </Box>
                 <Box sx={{ mt: '0px' }}>
                     <Button
                         className={styles.orderButton}
-                        onClick={handleCloseNavMenu}
+                        component={Link}
+                        to="order-now"
                         sx={{ my: 2, color: 'white', display: 'block' }}
                     >
                         Order Now
