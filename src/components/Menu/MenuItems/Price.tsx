@@ -9,6 +9,11 @@ export interface PriceProps {
 
 const Price: React.FC<PriceProps> = ({ price, quantity, units}) => {
 
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
     if(price instanceof Array){
         return (
             <></>
@@ -17,7 +22,7 @@ const Price: React.FC<PriceProps> = ({ price, quantity, units}) => {
 
     return (
         <>
-            <Typography>${price}{
+            <Typography>{formatter.format(price)}{
                 quantity ? (`  -  ${quantity} ${units}`) : null
             }</Typography>
             

@@ -12,7 +12,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
     const { titleText, descriptionText } = useItemStyles();
 
     return (
-        <Grid item xs={12} md={5} style={{ margin: "1rem"}}>
+        <Grid item xs={12} md={5} style={{ margin: "1rem"}} spacing={1}>
             <Typography className={titleText}>{item.title} {item["spanish-title"] ? (`| ${item['spanish-title']}`) : null}</Typography>
             {
                 item.description ? (

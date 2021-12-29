@@ -24,7 +24,6 @@ const MenuCategory: React.FC<MenuCategoryProps> = ({ name, setCategory }) => {
     return (
         <Box 
             className={root} 
-            sx={{ justifyContent: "center", alignItems: "center"}}
             onClick={() => handleClick(name)}>
             <Typography className={text}>
                 {CategoryNames[name]}

@@ -28,9 +28,10 @@ export const Menu: React.FC<MenuProps> = ({ category }) => {
     }, [fetchMenu]);
 
     return(
+        <Container style={{ justifyContent: "center", alignItems: "center", margin: "1rem" }}>
             <Grid 
                 container 
-                spacing={0}
+                spacing={2}
             >
                 {
                     menu?.map((item : MenuItem) => {
@@ -40,5 +41,6 @@ export const Menu: React.FC<MenuProps> = ({ category }) => {
                     })
                 }
             </Grid>
+        </Container>
     )
 }

@@ -10,7 +10,6 @@ export interface MenuCategoriesProps {
 const MenuCategories: React.FC<MenuCategoriesProps> = ({ setCategory }) => {
 
     return(
-        <Container maxWidth="xl">
             <Grid 
                 container 
                 spacing={0}
@@ -27,7 +26,6 @@ const MenuCategories: React.FC<MenuCategoriesProps> = ({ setCategory }) => {
                     })
                 }
             </Grid>
-        </Container>
     )
 }
 

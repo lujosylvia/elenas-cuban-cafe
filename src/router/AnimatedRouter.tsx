@@ -22,7 +22,7 @@ const AnimatedRouter = () => {
     const [category, setCategory] = useState<DatabaseCategories | null>(null);
   
     return (
-        <div style={{ padding: "5rem"}}>
+        <div style={{ padding: "2rem", paddingTop: "5rem"}}>
           <TransitionGroup>
             {/*
               This is no different than other usage of
