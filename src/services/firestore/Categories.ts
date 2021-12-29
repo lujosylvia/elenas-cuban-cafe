@@ -1,22 +1,22 @@
-enum DatabaseCategories {
+export enum DatabaseCategories {
+    DAILY_SPECIALS = "Daily",
     APPETIZERS = "Appetizers",
     CHICKEN = "Chicken",
-    COFFEE_TEA = "CoffeeTea",
-    DAILY_SPECIALS = "Daily",
-    DESSERTS = "Desserts",
-    DRINKS = "Drinks",
-    JUICES = "Juices",
-    KIDS = "Kids",
-    MILKSHAKES = "Milkshakes",
     PORK_BEEF = "PorkBeef",
     SALADS = "Salads",
     SANDWICHES = "Sandwiches",
     SEAFOOD = "Seafood",
     SIDES = "Sides",
-    SOUPS = "Soups"
+    SOUPS = "Soups",
+    KIDS = "Kids",
+    COFFEE_TEA = "CoffeeTea",
+    DRINKS = "Drinks",
+    JUICES = "Juices",
+    DESSERTS = "Desserts",
+    MILKSHAKES = "Milkshakes",
 }
 
-const CategoryNames = {
+export const CategoryNames = {
     [DatabaseCategories.APPETIZERS]: "Appetizers / Aperitivos",
     [DatabaseCategories.CHICKEN]: "Chicken / Pollo",
     [DatabaseCategories.COFFEE_TEA]: "Coffee and Tea / Café y Té",
@@ -33,5 +33,3 @@ const CategoryNames = {
     [DatabaseCategories.SIDES]: "Side Orders / Acompañantes",
     [DatabaseCategories.SOUPS]: "Soups / Sopas"
 }
-
-export default DatabaseCategories;

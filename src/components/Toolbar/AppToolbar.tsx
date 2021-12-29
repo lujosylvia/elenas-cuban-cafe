@@ -24,7 +24,7 @@ const AppToolbar = () => {
   };
     return(
         <Box classes={styles.root} sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
-            <AppBar position="static">
+            <AppBar position="fixed">
             <Toolbar>
             <Typography
                     variant="h6"

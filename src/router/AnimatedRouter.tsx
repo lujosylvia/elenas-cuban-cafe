@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     TransitionGroup,
     CSSTransition
@@ -13,12 +13,16 @@ import {
 import { Menu } from "../components/Menu/Menu";
 import { Location } from "../components/Location/Location";
 import { OrderNow } from "../components/OrderNow/OrderNow";
+import { DatabaseCategories } from "../services/firestore/Categories";
+import MenuCategories from "../components/Menu/MenuCategories/MenuCategories";
 
 const AnimatedRouter = () => {
     let location = useLocation();
+
+    const [category, setCategory] = useState<DatabaseCategories | null>(null);
   
     return (
-        <div>
+        <div style={{ padding: "5rem"}}>
           <TransitionGroup>
             {/*
               This is no different than other usage of
@@ -27,9 +31,10 @@ const AnimatedRouter = () => {
               the old location as it animates out.
             */}
               <Routes location={location}>
-                  <Route path="menu" element={<Menu />} />
-                  <Route path="location" element={<Location />} />
-                  <Route path="order-now" element={<OrderNow />} />
+                  <Route path="/menu" element={<MenuCategories setCategory={setCategory} />} />
+                  <Route path="/menu/:category" element={<Menu category={category} />} />
+                  <Route path="/location" element={<Location />} />
+                  <Route path="/order-now" element={<OrderNow />} />
               </Routes>
           </TransitionGroup>
         </div>
