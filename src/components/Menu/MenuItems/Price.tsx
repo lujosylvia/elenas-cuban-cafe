@@ -16,7 +16,19 @@ const Price: React.FC<PriceProps> = ({ price, quantity, units}) => {
 
     if(price instanceof Array){
         return (
-            <></>
+            <Grid direction="column">
+                {
+                    price.map((value: number, index: number) => {
+                        const quantityArray = quantity as Array<number>;
+                        
+                        return(
+                            <Typography>{formatter.format(value)}{
+                                quantity ? (`  -  ${quantityArray[index]} ${units}`) : null
+                            }</Typography>
+                        );
+                    })
+                }
+            </Grid>
         )
     }
 
