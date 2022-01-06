@@ -31,6 +31,7 @@ const AnimatedRouter = () => {
               the old location as it animates out.
             */}
               <Routes location={location}>
+                  <Route path="/" element={<MenuCategories setCategory={setCategory} />} />
                   <Route path="/menu" element={<MenuCategories setCategory={setCategory} />} />
                   <Route path="/menu/:category" element={<Menu category={category} />} />
                   <Route path="/location" element={<Location />} />
