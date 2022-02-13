@@ -22,7 +22,7 @@ const Price: React.FC<PriceProps> = ({ price, quantity, units}) => {
                         const quantityArray = quantity as Array<number>;
                         
                         return(
-                            <Typography>{formatter.format(value)}{
+                            <Typography style={{ color: "#534E4C", fontFamily: "'Roboto', sans-serif" }}>{formatter.format(value)}{
                                 quantity ? (`  -  ${quantityArray[index]} ${units}`) : null
                             }</Typography>
                         );
@@ -34,7 +34,7 @@ const Price: React.FC<PriceProps> = ({ price, quantity, units}) => {
 
     return (
         <>
-            <Typography>{formatter.format(price)}{
+            <Typography style={{ color: "#534E4C", fontFamily: "'Roboto', sans-serif" }}>{formatter.format(price)}{
                 quantity ? (`  -  ${quantity} ${units}`) : null
             }</Typography>
             

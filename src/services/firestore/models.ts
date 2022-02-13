@@ -6,4 +6,5 @@ export interface MenuItem {
     flavors?: string[] | null;
     description?: string | null;
     units?: string | null;
+    day?: number | null;
 }

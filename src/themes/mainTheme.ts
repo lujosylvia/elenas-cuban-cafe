@@ -23,7 +23,7 @@ const fontFamily = [
   const red = "#F5222D";
   
   const primary = {
-    main: "#4B7CC7",
+    main: "#534E4C",
     light: "rgba(75,124,199,0.75)",
     contrastText: "#fff"
   };
@@ -50,11 +50,17 @@ const fontFamily = [
   };
 
   const background = {
-      default: "#FAF9F5"
+      default: "#F7F7F7"
   };
   
   const palette = {
-    primary,
+    primary: {
+      "100": "#534E4C",
+      "400": "#534E4C",
+      "500": "#534E4C",
+      "700": "#534E4C",
+      "800": "#534E4C"
+    },
     background,
     secondary,
     success,

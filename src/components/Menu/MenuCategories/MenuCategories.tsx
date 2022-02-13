@@ -14,12 +14,13 @@ const MenuCategories: React.FC<MenuCategoriesProps> = ({ setCategory }) => {
                 container 
                 spacing={0}
                 justifyContent='center'
-                alignItems='center'>
+                alignItems='center'
+                >
                 {
                     Object.values(DatabaseCategories).map((category) => {
                         var dbcat = category as DatabaseCategories;
                         return (
-                            <Grid item xs={12} md={3}>
+                            <Grid item xs={12} md={12}>
                                 <MenuCategory name={dbcat} setCategory={setCategory} />
                             </Grid>
                         );

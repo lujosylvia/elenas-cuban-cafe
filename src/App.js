@@ -9,6 +9,7 @@ import './App.css';
 
 const App = () => {
   return (
+    <div style={{ backgroundColor: "#eeeeee", height: "1000px", weight: "1000px"}}>
     <ThemeProvider theme={mainTheme}>
       <Router>
         <div className="App">
@@ -17,6 +18,7 @@ const App = () => {
         <AnimatedRouter />
       </Router>
     </ThemeProvider>
+    </div>
   );
 }
 

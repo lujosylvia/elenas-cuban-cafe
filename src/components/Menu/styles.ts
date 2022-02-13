@@ -1,6 +1,6 @@
 import { makeStyles, Theme } from "@material-ui/core";
 
-export const useItemStyles = makeStyles(
+export const useMenuStyles = makeStyles(
     (theme: Theme) => ({
         titleText: {
             fontSize: "1.15rem",
@@ -8,11 +8,6 @@ export const useItemStyles = makeStyles(
             textTransform: "uppercase",
             color: "#534E4C",
             fontFamily: "'Roboto', sans-serif",
-        },
-        descriptionText: {
-            fontSize: "1.1rem",
-            color: "#534E4C",
-            fontFamily: "'Roboto', sans-serif"
         }
     })
 );

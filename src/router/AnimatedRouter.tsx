@@ -15,14 +15,16 @@ import { Location } from "../components/Location/Location";
 import { OrderNow } from "../components/OrderNow/OrderNow";
 import { DatabaseCategories } from "../services/firestore/Categories";
 import MenuCategories from "../components/Menu/MenuCategories/MenuCategories";
+import { useAnimatedRouterStyles } from "./styles";
 
 const AnimatedRouter = () => {
+    const { appBackground } = useAnimatedRouterStyles();
     let location = useLocation();
 
     const [category, setCategory] = useState<DatabaseCategories | null>(null);
   
     return (
-        <div style={{ padding: "2rem", paddingTop: "5rem"}}>
+        <div className={appBackground}>
           <TransitionGroup>
             {/*
               This is no different than other usage of

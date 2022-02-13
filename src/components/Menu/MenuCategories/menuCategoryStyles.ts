@@ -6,10 +6,8 @@ export const useMenuCategoryStyles = makeStyles(
         root: {
             display: "flex",
             flexDirection: "column",
-            background: "#1976d2",
-            opacity: 0.5,
             borderRadius: "4px 4px 4px 4px",
-            height: theme.spacing(60),
+            height: theme.spacing(10),
             justifyContent: "center",
             alignItems: "center",
             alignContent: "center",
@@ -17,16 +15,24 @@ export const useMenuCategoryStyles = makeStyles(
             padding: theme.spacing(1)
         },
         text: {
-            fontSize: theme.spacing(2),
+            fontSize: theme.spacing(3),
             textAlign: "center",
-            color: "white",
-            fontWeight: 550,
-            fontFamily: "'Montserrat', sans-serif",
+            color: "#534E4C",
+            fontWeight: 400,
+            fontFamily: "'Roboto', sans-serif",
             alignItems: "center",
             textTransform: "uppercase",
-            "&:hover": {
-                opacity: 1,
+            opacity: 1,
+            textDecoration: "none",
+            transition: "box-shadow 0.3s, font-weight 0.3s, ease-in-out",
+            '&:hover': {
+                boxShadow: "0 1px #534E4C",
+                fontWeight: 500
+                
+            },
+            '&::after': {
+
             }
-        },
+        }
     })
 );

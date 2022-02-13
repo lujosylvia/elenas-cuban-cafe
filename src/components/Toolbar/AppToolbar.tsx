@@ -24,23 +24,16 @@ const pages = [{
       };
         return(
             <Box classes={styles.root} sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
-                <AppBar position="fixed">
+                <AppBar position="fixed" style={{ background: "white"}}>
                 <Toolbar>
-                <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-                    >
-                        ELENA'S CUBAN CAFE
-                    </Typography>
+                    <img src="/logo.jpg" alt="logo" style={{ maxWidth: "120px", marginTop: "0.2rem"}} />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
                         {pages.map((page) => (
                         <Button
                             key={page.title}
                             component={Link}
                             to={page.route}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 3, color: '#534E4C', display: 'block' }}
                         >
                             {page.title}
                         </Button>
