@@ -26,7 +26,7 @@ const pages = [{
             <Box classes={styles.root} sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
                 <AppBar position="fixed" style={{ background: "white"}}>
                 <Toolbar>
-                    <img src="/logo.jpg" alt="logo" style={{ maxWidth: "120px", marginTop: "0.2rem"}} />
+                    <img src="/logo.JPG" alt="logo" style={{ maxWidth: "120px", marginTop: "0.2rem"}} />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
                         {pages.map((page) => (
                         <Button

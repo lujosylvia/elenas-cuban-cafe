@@ -20,7 +20,7 @@ const Item: React.FC<ItemProps> = ({ item, width }) => {
                     <Typography className={descriptionText}>{item.description}</Typography>
                 ) : null
             }
-            <Price price={item.price} quantity={item.quantity} units={item.units ?? "units"} />
+            <Price price={item.price} quantity={item.quantity} units={item.units ?? "count"} />
         </Grid>
     );
 }
