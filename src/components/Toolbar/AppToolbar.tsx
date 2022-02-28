@@ -9,6 +9,10 @@ import { Link } from "react-router-dom";
 const pages = [{
         title: 'Menu',
         route: "menu"
+    },
+    {
+        title: 'Order Now',
+        route: 'order-now'
     }/*, {
         title: 'Location',
         route: "location"
@@ -24,9 +28,9 @@ const pages = [{
       };
         return(
             <Box classes={styles.root} sx={{ flexGrow: 1, display: { xs: 'flex' } }}>
-                <AppBar position="fixed" style={{ background: "white"}}>
+                <AppBar position="fixed" style={{ background: "white", paddingBottom: "0.5rem"}}>
                 <Toolbar>
-                    <img src="/logo.JPG" alt="logo" style={{ maxWidth: "120px", marginTop: "0.2rem"}} />
+                    <img src="/logo.jpg" alt="logo" style={{ maxWidth: "120px", marginTop: "0.2rem"}} />
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
                         {pages.map((page) => (
                         <Button

@@ -66,7 +66,8 @@ export const Menu: React.FC<MenuProps> = ({ category }) => {
                 style={{  marginTop: "1rem", justifyContent: "center" }}
             >
                 {
-                    menu?.map((item : MenuItem) => <Item item={item} />)
+                    menu?.sort((a: any, b: any) => a.title.localeCompare(b.title))
+                        .map((item : MenuItem) => <Item item={item} />)
                 }
             </Grid>
     )
