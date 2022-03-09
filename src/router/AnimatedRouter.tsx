@@ -16,6 +16,9 @@ import { OrderNow } from "../components/OrderNow/OrderNow";
 import { DatabaseCategories } from "../services/firestore/Categories";
 import MenuCategories from "../components/Menu/MenuCategories/MenuCategories";
 import { useAnimatedRouterStyles } from "./styles";
+import { LoginPage } from "../pages/Login/LoginPage";
+import UpdateMenu from "../pages/UpdateMenu/UpdateMenu";
+import Orders from "../pages/Orders/Orders";
 
 const AnimatedRouter = () => {
     const { appBackground } = useAnimatedRouterStyles();
@@ -38,6 +41,9 @@ const AnimatedRouter = () => {
                   <Route path="/menu/:category" element={<Menu category={category} />} />
                   <Route path="/location" element={<Location />} />
                   <Route path="/order-now" element={<OrderNow />} />
+                  <Route path="/admin-login" element={<LoginPage />} />
+                  <Route path="/admin/update-menu" element={<UpdateMenu />}/>
+                  <Route path="/admin/view-orders" element={<Orders />} />
               </Routes>
           </TransitionGroup>
         </div>
