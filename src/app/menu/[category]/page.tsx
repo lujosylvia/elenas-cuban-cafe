@@ -5,22 +5,20 @@ import { DayNames } from '@/constants';
 import { getMenu } from '@/services/firestore/api';
 import { DatabaseCategories } from '@/services/firestore/Categories';
 import { MenuItem } from '@/services/firestore/MenuItem';
-import React, { useCallback, useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-interface MenuParams {
-  params: {
-    category: string
-  }
-};
-
-const Menu: React.FC<MenuParams> = ({ params }) => {
+const Menu: React.FC = () => {
   const [menu, setMenu] = useState<MenuItem[] | null>(null);
 
+  const pathName = usePathname();
+  const category = useMemo(() => pathName.replace('/menu/', ''), []);
+
   const fetchMenu = useCallback(async () => {
-    const cat = (await params).category as DatabaseCategories;
+    const cat = category as DatabaseCategories;
     const response = await getMenu(cat) as MenuItem[];
     setMenu(response);
-  }, [params]);
+  }, [category]);
 
   useEffect(() => {
     fetchMenu();
