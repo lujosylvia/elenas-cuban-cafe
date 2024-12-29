@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export const OrderNow: React.FC = () => {
+const OrderNow: React.FC = () => {
     return(
             <div className='flex flex-col px-[3rem] pb-[3rem] pt-[1rem] gap-[2rem]'>
                 <p className='text-sm md:text-md'>For drive thru pick-up, please call 15 minutes ahead at (863) 665-3333.</p>
