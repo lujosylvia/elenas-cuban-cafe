@@ -2,8 +2,11 @@ import "./globals.css";
 import Toolbar from "@/components/Toolbar/Toolbar";
 import { inter } from "./fonts";
 import { NextUIProvider } from "@nextui-org/system";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "Elena's Cuban Café",
+};
 
 export default function RootLayout({
   children,
