@@ -14,13 +14,13 @@ interface MenuParams {
 };
 
 const Menu: React.FC<MenuParams> = ({ params }) => {
-  const [menu, setMenu] = useState<any | null>(null);
+  const [menu, setMenu] = useState<MenuItem[] | null>(null);
 
   const fetchMenu = useCallback(async () => {
     const cat = (await params).category as DatabaseCategories;
-    let response = await getMenu(cat);
-    setMenu(response)
-  }, []);
+    const response = await getMenu(cat) as MenuItem[];
+    setMenu(response);
+  }, [params]);
 
   useEffect(() => {
     fetchMenu();
@@ -48,7 +48,7 @@ if(menu?.some((x: MenuItem) => x.day !== undefined)){
 return(
   <div className='flex flex-col gap-[4rem] mt-[1rem] mx-[3rem] justify-start items-start' >
           {
-              menu?.sort((a: any, b: any) => a.title.localeCompare(b.title))
+              menu?.sort((a: MenuItem, b: MenuItem) => a.title.localeCompare(b.title))
                   .map((item : MenuItem) => {
                   return <Item key={item.title} item={item} />
 })

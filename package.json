@@ -1,5 +1,5 @@
 {
-  "name": "elenas-cuban-cafe-2",
+  "name": "elenas-cuban-cafe",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/react": "^2.6.10",
     "firebase": "^11.1.0",
+    "firebase-tools": "^13.29.1",
     "framer-motion": "^11.15.0",
     "next": "15.1.3",
     "react": "^19.0.0",

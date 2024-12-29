@@ -1,5 +1,5 @@
 export interface MenuItem {
-  title?: string | null;
+  title: string;
   "spanish-title"?: string | null;
   price: number | number[];
   quantity?: number | number[];

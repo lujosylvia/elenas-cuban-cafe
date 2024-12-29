@@ -10,7 +10,7 @@ interface MenuCategoryProps {
 
 const MenuCategory: React.FC<MenuCategoryProps> = ({ name }) => {
     return (
-        <Link href={`/menu/${name}`} className='flex flex-col items-center justify-center'>
+        <Link href={`/menu/${name}`} className='flex flex-col text-center items-center justify-center'>
                 <p className='text-md uppercase'>{CategoryNames[name]}</p>
         </Link>
     );
