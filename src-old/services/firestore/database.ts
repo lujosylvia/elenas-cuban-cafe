@@ -1,4 +1,4 @@
-import { getStorage } from "@firebase/storage";
+// Initialize Cloud Firestore through Firebase
 import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
 
@@ -14,6 +14,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const storage = getStorage(app);
+const database = getFirestore(app);
 
-export default getFirestore(app);
+export default database;

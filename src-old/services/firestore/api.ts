@@ -1,7 +1,6 @@
-import { collection, query, getDocs } from 'firebase/firestore';
-import { ref, getDownloadURL } from "firebase/storage";
+import { collection, query, getDocs } from "firebase/firestore";
 import { DatabaseCategories } from "./Categories";
-import database, { storage } from './database';
+import database from "./database";
 
 
 export const getMenu = async (category : DatabaseCategories | null) => {
@@ -14,9 +13,3 @@ export const getMenu = async (category : DatabaseCategories | null) => {
 
     return docSnap.docs.map((document) => document.data());
 }
-
-export const fetchImageUrl = async (imageName: string) => {
-  const storageRef = ref(storage, `${imageName}.png`);
-  return await getDownloadURL(storageRef);
-  
-};
