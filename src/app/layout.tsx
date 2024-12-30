@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased h-full pb-[5rem]`}
+        className={`${inter.className} antialiased h-[100vh] pb-[5rem]`}
       >
         <Providers>
           <Toolbar />

@@ -5,11 +5,11 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Image} from "@next
 
 const Toolbar: React.FC = () => {
   return (
-    <Navbar position='sticky' shouldHideOnScroll isBlurred isBordered className='flex flex-row py-[10px] px-[16px] border-b-[#CCCCCC] bg-white bg-opacity-[50%]'>
+    <Navbar position='sticky' maxWidth='full' shouldHideOnScroll isBlurred isBordered className='py-[10px] border-b-[#CCCCCC] bg-opacity-[50%]'>
       <NavbarBrand>
         <Image isBlurred width={80} height={60} src='/logo.JPG' className='opacity-50 m-5 rounded-[10%]'/>
       </NavbarBrand>
-      <NavbarContent className='flex flex-row gap-4' justify='center'>
+      <NavbarContent justify='end'>
         <NavbarItem>
         <Link className='text-sm/[12px]' color="foreground" href="/menu">
             MENU
