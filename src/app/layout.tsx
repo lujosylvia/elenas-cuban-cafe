@@ -1,8 +1,8 @@
 import "./globals.css";
 import Toolbar from "@/components/Toolbar/Toolbar";
 import { inter } from "./fonts";
-import { NextUIProvider } from "@nextui-org/system";
 import { Metadata } from "next";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Elena's Cuban Café",
@@ -14,16 +14,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased h-[100%] pb-[5rem]`}
+        className={`${inter.className} antialiased h-full pb-[5rem]`}
       >
-
-        <NextUIProvider>
-        <Toolbar />
-        {children}
-
-    </NextUIProvider>
+        <Providers>
+          <Toolbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

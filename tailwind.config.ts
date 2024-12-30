@@ -13,10 +13,6 @@ export default {
       screens: {
         md: '800px',
       },
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
     },
   },
   plugins: [
@@ -29,11 +25,17 @@ export default {
       themes: {
         light: {
           layout: {}, // light theme layout tokens
-          colors: {}, // light theme colors
+          colors: {
+            background: '#F7F7F7',
+            foreground: '#171717',
+          }, // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens
-          colors: {}, // dark theme colors
+          colors: {
+            background: '#0a0a0a',
+            foreground: '#ededed'
+          }, // dark theme colors
         },
       },
     }),
