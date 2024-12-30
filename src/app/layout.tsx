@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased bg-[#F7F7F7] h-[100%] pb-[5rem]`}
+        className={`${inter.className} antialiased h-[100%] pb-[5rem]`}
       >
 
         <NextUIProvider>
