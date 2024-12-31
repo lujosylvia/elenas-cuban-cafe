@@ -34,7 +34,8 @@ if(menu?.some((x: MenuItem) => x.day !== undefined)){
                       {
                               
                                       menu?.filter((item: MenuItem) => item.day === parseInt(value.toString()))
-                                           .map((item : MenuItem) => <Item key={item.title} item={item} />)
+                                      .sort((a, b) => Number(!!b.imageName) - Number(!!a.imageName))
+                                      .map((item : MenuItem) => <Item key={item.title} item={item} />)
                                   }
                     </div>
                   ))
@@ -47,6 +48,7 @@ return(
   <div className='flex flex-col gap-[4rem] mt-[1rem] mx-[3rem] justify-start items-start' >
           {
               menu?.sort((a: MenuItem, b: MenuItem) => a.title.localeCompare(b.title))
+                  .sort((a, b) => Number(!!b.imageName) - Number(!!a.imageName))
                   .map((item : MenuItem) => {
                   return <Item key={item.title} item={item} />
 })
